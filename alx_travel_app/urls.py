@@ -29,7 +29,7 @@ schema_view = get_schema_view(
         default_version='v1',
         description="API documentation for ALX Travel App",
         terms_of_service="https://www.google.com/policies/terms/",
-        contact=openapi.Contact(email="jubriltayo@gmail.com"),
+        contact=openapi.Contact(email="support@alxtravel.com"),
         license=openapi.License(name="MIT License"),
     ),
     public=True,
