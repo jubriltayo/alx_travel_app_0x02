@@ -52,7 +52,7 @@ class PaymentViewSet(viewsets.ModelViewSet):
     def initiate_payment(self, request, pk=None):
         try:
             booking = Booking.objects.get(booking_id=pk)
-            # if hasattr(booking, 'payment'):
+
             if Payment.objects.filter(booking=booking, payment_status="pending").exists():
                 return Response({'error': 'Payment already initiated for this booking'}, status=status.HTTP_400_BAD_REQUEST)
         
